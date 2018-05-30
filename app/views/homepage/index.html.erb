@@ -1114,8 +1114,8 @@
       <h1>Contact</h1>
     </div>
     <div style="display:flex; padding:30px" class="map_time">
-      <div style="display:flex;justify-content: center;" class="map"><!--left column-->
-        <%=image_tag("https://maps.googleapis.com/maps/api/staticmap?center=1860+North+University+Drive+Planation,FL&zoom=17&scale=1&size=400x400&markers=size:mid%7Ccolor:red%7Clabel:C%7C26.148966,-80.255277&key=AIzaSyCZJK4PZFF8rSGh7cg0nNSNQNFZUOCafMU", class:"w3-hover-map")%>
+      <div style="display:flex;justify-content: center; overflow:hidden;" class="map"><!--left column-->
+        <%=image_tag("https://maps.googleapis.com/maps/api/staticmap?center=1860+North+University+Drive+Planation,FL&zoom=17&scale=1&size=400x400&markers=size:mid%7Ccolor:red%7Clabel:C%7C26.148966,-80.255277&key=AIzaSyCZJK4PZFF8rSGh7cg0nNSNQNFZUOCafMU", class:"w3-hover-map", style:"object-fit:scale-down; max-width:100%")%>
       </div> 
       <div>
         <table class="w3-table-all w3-centered"><!--right column-->
