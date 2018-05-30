@@ -1,0 +1,53 @@
+<script>
+var myIndex = 0;
+carousel();
+anti_carousel(); 
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("food");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 9000);    
+}
+
+function anti_carousel() {
+    var i;
+    var x = document.getElementById("logo");
+    {
+       x.style.display = "block";  
+    }		
+    myIndex++;
+        
+    x.style.display = "none";  
+    setTimeout(anti_carousel, 9000);    
+}
+
+function switch_view(button_pressed) {
+  
+  // declaring variables for active/inactive state
+  var active = "w3-border-chada-brown w3-bar-item w3-button w3-chada-brown";//"w3-border w3-bar-item w3-button w3-dark-grey";
+  var inactive = "w3-border-chada-brown w3-bar-item w3-button";//"w3-border w3-bar-item w3-button";
+  var class_button_pressed = button_pressed.getAttribute("class");
+  
+  // changing the class for active state
+  if ( class_button_pressed == inactive ) {
+    // grabbing necessary data from and for clicked element
+    var category = button_pressed.getAttribute("data-category");
+    var content = document.getElementById(category);
+    //content to set to display block
+    content.style.display = "block";
+    var deactivate = document.getElementsByClassName("w3-chada-brown")[0];
+    // changing state
+    deactivate.className = inactive;
+    button_pressed.className = active;
+    // hiding visible content
+    document.getElementById(deactivate.getAttribute("data-category")).style.display = "none";
+    deactivate = null;
+  }
+}
+</script>
