@@ -1,0 +1,21 @@
+current directory: /home/chadathai/webapps/chada_thai/chada/gems/gems/puma-3.11.3/ext/puma_http11
+/usr/local/bin/ruby2.4 -r ./siteconf20180531-41999-1u7hk2k.rb extconf.rb
+checking for BIO_read() in -lcrypto... yes
+checking for SSL_CTX_new() in -lssl... yes
+checking for openssl/bio.h... yes
+creating Makefile
+
+current directory: /home/chadathai/webapps/chada_thai/chada/gems/gems/puma-3.11.3/ext/puma_http11
+make "DESTDIR=" clean
+
+current directory: /home/chadathai/webapps/chada_thai/chada/gems/gems/puma-3.11.3/ext/puma_http11
+make "DESTDIR="
+compiling http11_parser.c
+compiling io_buffer.c
+compiling mini_ssl.c
+compiling puma_http11.c
+linking shared-object puma/puma_http11.so
+
+current directory: /home/chadathai/webapps/chada_thai/chada/gems/gems/puma-3.11.3/ext/puma_http11
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 puma_http11.so ./.gem.20180531-41999-1e0lojx/puma
