@@ -16,7 +16,7 @@
     <p><button onclick="document.getElementById('contact').style.display='block'" class="w3-button w3-chada-purple">Contact</button></p>
     <p style="display:none;"><button onclick="document.getElementById('events').style.display='block'" class="w3-button" style="background-color:#13263D">events</button></p>
   </div>
-  <div style="z-index:2;" class="w3-display-bottommiddle w3-container">
+  <div style="z-index:2; white-space:nowrap;" class="w3-display-bottommiddle w3-container">
       <a href="https://www.facebook.com/chadathaiandsushi" target="_blank"><%=image_tag("chada_fb_icon.png", class:"w3-image", style:"padding: 8px; height:48px; width:48px")%></a>  
       <a href="https://www.instagram.com/chadathaifl" target="_blank"><%=image_tag("chada_ig_icon.png", class:"w3-image", style:"padding: 8px; height:48px; width:48px")%></a>
       <a href="https://www.deliverydudes.com/Plantation/Restaurants/Chada-Thai-Plantation" target="_blank"><%=image_tag("chada_dd_icon.png", class:"w3-image", style:"padding: 8px; height:48px; width:48px")%></a>
@@ -644,7 +644,7 @@
     <!-- ************************  CD5.PSD  ************************************************--> 
     <div id="chef_rolls" style="display:none; padding-bottom:32px">
       <div style="display:flex;justify-content:space-around;" class="w3-chada-gold">
-        <h1 class="w3-chada-gold " style="display:flex;">Combination</h1><h1 class="w3-chada-gold" style="display:flex;">Chef's Special Rolls</h1>
+        <h1 class="w3-chada-gold " style="display:flex;">Chef's Special Rolls</h1><h1 class="w3-chada-gold" style="display:flex;">Combination</h1>
         <span onclick="document.getElementById('menu').style.display='none'" class="w3-button w3-display-topright w3-large">x</span>
       </div>    
       <div class="w3-cell-row">
@@ -1016,8 +1016,7 @@
       <div style="display:flex;justify-content:space-around;" class="w3-chada-gold">
         <h1 class="w3-chada-gold " style="display:flex;">Kid's Menu</h1><h1 class="w3-chada-gold " style="display:flex;">Desserts</h1>
         <span onclick="document.getElementById('menu').style.display='none'" class="w3-button w3-display-topright w3-large">x</span>
-      </div>
-      <div class="w3-text-red w3-center w3-margin-top w3-xlarge" id="CD1">(Age 12 and under) Served with ice cream</div>
+      </div>      
       <div class="w3-cell-row">
         <!--|||||||||||||||||||||||||||||||||  LEFT COLUMN ||||||||||||||||||||||||| -->
         <div class="w3-cell" style="width:50%;" >
@@ -1095,6 +1094,7 @@
           </div>
         </div>
       </div>
+     <div class="w3-text-red w3-center w3-margin-top w3-xlarge" id="CD1">(Age 12 and under) Served with ice cream</div>  
     </div> <!-- end of view switcher container -->
     <!-- ************************  END OF CD9.PSD  ************************************************-->
     
