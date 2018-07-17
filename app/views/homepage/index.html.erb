@@ -3,18 +3,51 @@
   <%=image_tag("chada_1.jpg", class: "food landscape w3-display-middle w3-animate-fading")%>
   <%=image_tag("chada_2.jpg", class: "food landscape2 w3-display-middle w3-animate-fading")%>
   <%=image_tag("chada_3.jpg", class: "food landscape3 w3-display-middle w3-animate-fading")%>
-  <div id="logo">
-	<div class="w3-display-middle" style="z-index:2;">
+  <div id="logo" class="w3-display-middle" style="z-index:2">
+   <!--<div class="w3-display-middle" style="z-index:2;">
 		<%=image_tag("borderlogo.png", class:"logo")%>
    </div>
    <div class="w3-display-middle" style="z-index:2;">
 		<%=image_tag("chadalogo.png", class:"logo",style: "position:absolute; transform:translate(-50%,-49%)")%>
-   </div>
+   </div>-->
+  <svg width="800" height="600" viewbox="0 150 800 200">
+  <rect id="rec" x="300" y="0" width="300" height="100" style="fill:none; opacity:0;" >
+    <defs>
+      <linearGradient id="grad1" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" style="stop-color:rgb(255,0,0);stop-opacity:1" />
+        <stop offset="100%" style="stop-color:rgb(255,255,0);stop-opacity:0" />
+      </linearGradient>
+    </defs>
+    <animate attributeName="x" attributeType="XML" begin="0s" dur="6s" fill="freeze" from="300" to="0" /> 
+    <animate attributeName="y" attributeType="XML" begin="0s" dur="6s" fill="freeze" from="100" to="0" /> 
+    <animate attributeName="width" attributeType="XML" begin="0s" dur="6s" fill="freeze" from="300" to="800" /> 
+    <animate attributeName="height" attributeType="XML" begin="0s" dur="6s" fill="freeze" from="100" to="300" /> 
+    <animate attributeName="fill" attributeType="CSS" from="transparent" to="white" begin="2s" dur="4s" fill="freeze" />
+    <animate attributeName="opacity" attributeType="CSS" from="0" to="0.6" begin="2s" dur="4s" fill="freeze" />
+  </rect>
+  <g transform="translate(100,100)"> 
+    <text id="TextElement" x="-50" y="-20" style="font-family:Cinzel;font-size:18; visibility:hidden"> Welcome to Chada Thai
+      <tspan x="-5" y="0" style="font-family:Cordia New;font-size:16;font-weight:bold;"> "We Served Your Happiness Time"</tspan>
+      <set attributeName="visibility" attributeType="CSS" to="visible" begin="1s" dur="5s" fill="freeze" />
+      <animateMotion path="M 0 0 L 100 100" begin="1s" dur="5s" fill="freeze" />
+      <animate attributeName="fill" attributeType="CSS" from="white" to="#d70707" begin="1s" dur="5s" fill="freeze" /> 
+      <animateTransform attributeName="transform" attributeType="XML" type="rotate" from="-30" to="0" begin="1s" dur="5s" fill="freeze" /> 
+      <animateTransform attributeName="transform" attributeType="XML" type="scale" from="1" to="3" additive="sum" begin="1s" dur="5s" fill="freeze" /> 
+    </text> 
+  </g>
+  Sorry, your browser does not support inline SVG.
+</svg>
+   <!--<div class="w3-display-container" id="welcome" style="background:linear-gradient(180deg, #ffffff, transparent); position:absolute; transform:translate(-50%,-130%);white-space:nowrap;">
+     <p class="w3-center w3-animate-top" style="font-size:40px;color:red;">    
+     </p>
+     <span style="display:block; font-size:40px;color:red;" class="w3-center">  
+     </span>
+   </div>-->
   </div>  
   <div class="w3-display-topleft w3-container w3-xlarge" style="z-index:2;background:linear-gradient(180deg, #ffffff, transparent);" id="modal_button">
     <p><button onclick="document.getElementById('menu').style.display='block'" class="w3-button w3-chada-gold">Menu</button></p>
     <p><button onclick="document.getElementById('contact').style.display='block'" class="w3-button w3-chada-purple">Contact</button></p>
-    <p style="display:none;"><button onclick="document.getElementById('events').style.display='block'" class="w3-button" style="background-color:#13263D">events</button></p>
+    <p><button onclick="document.getElementById('events').style.display='block'" class="w3-button" style="background-color:#13263D">events</button></p>
   </div>
   <div style="z-index:2; white-space:nowrap;" class="w3-display-bottommiddle w3-container">
       <a href="https://www.facebook.com/chadathaiandsushi" target="_blank"><%=image_tag("chada_fb_icon.png", class:"w3-image", style:"padding: 8px; height:48px; width:48px")%></a>  
@@ -58,23 +91,19 @@
         <div class="w3-cell">
           <div class="w3-container" style="width:100%;">
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">House Salad</div><div class="price w3-col s3 w3-right-align"> 4.95</div> </div>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">House Salad</div><div class="price w3-col s3 w3-left-align"> 4.95</div> </div>
               <span>Served with ginger <br>or peanut dressing</span>
             </div>
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Seaweed Salad</div><div class="price w3-col s3 w3-right-align"> 5.95</div> </div>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Seaweed Salad</div><div class="price w3-col s3 w3-left-align"> 5.95</div> </div>
               <span></span>
             </div>
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Papaya Salad</div><div class="price w3-col s3 w3-right-align"> 8.95</div> </div>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Papaya Salad</div><div class="price w3-col s3 w3-left-align"> 8.95</div> </div>
               <span>Sliced papaya,tomato, <br>peanut, lime juice</span>
             </div>
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Larb Gai</div><div class="price w3-col s3 w3-right-align"> 9.95</div> </div>
-              <span>Ground chicken, red onion, <br>mint, lime juice</span>
-            </div>
-            <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Yum Woonsen</div><div class="price w3-col s3 w3-right-align"> 9.95</div> </div>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Yum Woonsen</div><div class="price w3-col s3 w3-left-align"> 9.95</div> </div>
               <span>Bean thread noodle, <br>ground chicken, shrimp <br>&amp; chili paste in our lime juice</span>
             </div>
             <!-- menu image -->
@@ -86,21 +115,25 @@
                 </div>
               </div>
             </div>
+            <div class="dish-item">
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Larb Gai</div><div class="price w3-col s3 w3-left-align"> 9.95</div> </div>
+              <span>Ground chicken, red onion, <br>mint, lime juice</span>
+            </div>
             <!-- menu image -->
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Seafood Salad</div><div class="price w3-col s3 w3-right-align"> 10.95</div> </div>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Seafood Salad</div><div class="price w3-col s3 w3-left-align"> 10.95</div> </div>
               <span>Shrimp, krab meat, cucumber,  <br>carrot, crunchy flakes &amp; avocado <br>with ginger or peanut dressing</span>
             </div>
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Thai Beef Salad <br>(Tiger's Tear)</div><div class="price w3-col s3 w3-right-align"> 9.95</div> </div>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Thai Beef Salad <br>(Tiger's Tear)</div><div class="price w3-col s3 w3-left-align"> 9.95</div> </div>
               <span>Grilled beef, onions, scallions, <br>tomatoes, cucumber, bell peppers</span>
             </div>
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Nam Sod</div><div class="price w3-col s3 w3-right-align"> 8.95</div> </div>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Nam Sod</div><div class="price w3-col s3 w3-left-align"> 8.95</div> </div>
               <span>Ground chicken, sliced ginger <br>onions, peanut, bell pepper </span>
             </div>
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Shrimp Salad or Squid Salad</div><div class="price w3-col s3 w3-right-align"> 10.95</div> </div>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Shrimp Salad or Squid Salad</div><div class="price w3-col s3 w3-left-align"> 10.95</div> </div>
               <span>Served with seasoning and lime juice <br></span>
             </div>
           </div>
@@ -111,16 +144,16 @@
         <div class="w3-cell" style="width:50%;">
           <div class="w3-container">
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Miso Soup</div><div class="price w3-col s3 w3-right-align"> 3.50</div> </div>
-              <span>Soft Tofu, scallion, <br>seaweed in Miso Broth</span>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Miso Soup</div><div class="price w3-col s3 w3-left-align"> 3.50</div> </div>
+              <span>Soft Tofu, scallions, <br>seaweed in Miso Broth</span>
             </div>
             <div class="dish-item">
               <div class="w3-margin-top dish-name">Tom Yum</div>
               <span>Lemon grass and herbs in a spicy <br>and sour broth</span>
               <div class="w3-row">
-                <div class="alternate-price w3-col s10 w3-padding-left">VEGETABLE</div><div class="price w3-col s2 w3-right-align"> 4.50</div>
-                <div class="alternate-price w3-col s10 w3-padding-left">CHICKEN</div><div class="price w3-col s2 w3-right-align"> 4.50</div>
-                <div class="alternate-price w3-col s10 w3-padding-left">SHRIMP</div><div class="price w3-col s2 w3-right-align"> 5.50</div>
+                <div class="alternate-price w3-col s9 w3-padding-left">VEGETABLE</div><div class="price w3-col s3 w3-left-align"> 4.50</div>
+                <div class="alternate-price w3-col s9 w3-padding-left">CHICKEN</div><div class="price w3-col s3 w3-left-align"> 4.50</div>
+                <div class="alternate-price w3-col s9 w3-padding-left">SHRIMP</div><div class="price w3-col s3 w3-left-align"> 5.50</div>
               </div>
             </div>
             <!-- menu image -->
@@ -137,28 +170,28 @@
               <div class="w3-margin-top dish-name">Tom Kha</div>
               <span>Lemon grass soup and spices in <br>coconut milk broth</span>
               <div class="w3-row">  
-                <div class="alternate-price w3-col s10 w3-padding-left">CHICKEN</div><div class="price w3-col s2 w3-right-align"> 4.95</div>
-                <div class="alternate-price w3-col s10 w3-padding-left">SHRIMP</div><div class="price w3-col s2 w3-right-align"> 5.95</div>
+                <div class="alternate-price w3-col s9 w3-padding-left">CHICKEN</div><div class="price w3-col s3 w3-left-align"> 4.95</div>
+                <div class="alternate-price w3-col s9 w3-padding-left">SHRIMP</div><div class="price w3-col s3 w3-left-align"> 5.95</div>
               </div>
             </div>
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">King of the sea <br>(Tom yum)</div><div class="price w3-col s3 w3-right-align"> 7.95</div> </div>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">King of the sea <br>(Tom yum)</div><div class="price w3-col s3 w3-left-align"> 7.95</div> </div>
               <span>Seafood, mushroom, lemon grass <br>soup &amp; spices in coconut broth</span>
             </div>
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">King of the sea <br>(Tom Kha)</div><div class="price w3-col s3 w3-right-align"> 8.95</div> </div>
-              <span>Sesfood, tomatoes, mushroom,<br>scallions in hot &amp; sour<br>lemon grass broth</span>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">King of the sea <br>(Tom Kha)</div><div class="price w3-col s3 w3-left-align"> 8.95</div> </div>
+              <span>Seafood, tomatoes, mushroom,<br>scallions in hot &amp; sour<br>lemon grass broth</span>
             </div>
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Mixed Veggie</div><div class="price w3-col s3 w3-right-align"> 4.00</div> </div>
-              <span>Mixed veggie with clear broth</span>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Mixed Veggies</div><div class="price w3-col s3 w3-left-align"> 4.00</div> </div>
+              <span>Mixed veggies with clear broth</span>
             </div>
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Chicken Soup</div><div class="price w3-col s3 w3-right-align"> 4.50</div> </div>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Chicken Soup</div><div class="price w3-col s3 w3-left-align"> 4.50</div> </div>
               <span>Chicken &amp; veggies with clear broth</span>
             </div>
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Wonton Soup</div><div class="price w3-col s3 w3-right-align"> 4.95</div> </div>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Wonton Soup</div><div class="price w3-col s3 w3-left-align"> 4.95</div> </div>
               <span>Minced chicken in pastries</span>
             </div>
           </div>
@@ -180,19 +213,19 @@
         <div class="w3-cell">
           <div class="w3-container" style="width:100%;">
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Age Tofu</div><div class="price w3-col s3 w3-right-align"> 4.95</div> </div>
-              <span>Crispy fried tofu with sweet and chill sauce</span>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Age Tofu</div><div class="price w3-col s3 w3-left-align"> 4.95</div> </div>
+              <span>Crispy fried tofu with sweet and chili sauce</span>
             </div> 
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Chicken Satay</div><div class="price w3-col s3 w3-right-align"> 7.95</div> </div>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Chicken Satay</div><div class="price w3-col s3 w3-left-align"> 7.95</div> </div>
               <span>Marinated chicken skewered on bamboo stick <br>served with cucumber and peanut sauce</span>
             </div> 
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Crab Rangoon</div><div class="price w3-col s3 w3-right-align"> 6.95</div> </div>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Crab Rangoon</div><div class="price w3-col s3 w3-left-align"> 6.95</div> </div>
               <span>Crispy stuffed cream cheese, celery and crab</span>
             </div> 
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Edamame</div><div class="price w3-col s3 w3-right-align"> 4.95</div> </div>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Edamame</div><div class="price w3-col s3 w3-left-align"> 4.95</div> </div>
               <span>Broiled soybean pods</span>
             </div>
             <!-- menu image -->
@@ -206,28 +239,28 @@
             </div>
             <!-- menu image -->          
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Soft Shell Crab</div><div class="price w3-col s3 w3-right-align"> 12.95</div> </div>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Soft Shell Crab</div><div class="price w3-col s3 w3-left-align"> 12.95</div> </div>
               <span>Deep fried soft shell crab served <br> with ponzu sauce</span>
             </div> 
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Springs Rolls</div><div class="price w3-col s3 w3-right-align"> 4.95</div> </div>
-              <span>Crispy spring roll filled with shredded <br>vegetables and rice</span>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Springs Rolls</div><div class="price w3-col s3 w3-left-align"> 4.95</div> </div>
+              <span>Crispy spring roll filled with shredded <br>vegetables and rice vermicelli</span>
             </div> 
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Dumpling (Steamed or Fried)</div><div class="price w3-col s3 w3-right-align"> 6.95</div> </div>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Dumpling (Steamed or Fried)</div><div class="price w3-col s3 w3-left-align"> 6.95</div> </div>
               <span>Homemade stuffed shrimp, <br> chicken mushrooms, onion in wonton skin</span>
             </div> 
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Shrimp in the Blanket</div><div class="price w3-col s3 w3-right-align"> 8.95</div> </div>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Shrimp in the Blanket</div><div class="price w3-col s3 w3-left-align"> 8.95</div> </div>
               <span>Crispy rolls stuffed chicken and shrimp</span>
             </div> 
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Fried Calamari</div><div class="price w3-col s3 w3-right-align"> 8.95</div> </div>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Fried Calamari</div><div class="price w3-col s3 w3-left-align"> 8.95</div> </div>
               <span>Calamari panko breaded deep fried with sweet chili sauce</span>
             </div> 
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Curry Puffs</div><div class="price w3-col s3 w3-right-align"> 6.95</div> </div>
-              <span>Chicken, sweet potatoes, onions and curry powder <br>wrapped in a spring roll skin served refreshing <br>cucumber and peanut sauce</span>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Curry Puffs</div><div class="price w3-col s3 w3-left-align"> 6.95</div> </div>
+              <span>Chicken, sweet potatoes, onions and curry powder <br>wrapped in a spring roll skin served with refreshing <br>cucumber and peanut sauce</span>
             </div> 
           </div>  
         </div>
@@ -247,19 +280,19 @@
             </div>
             <!-- menu image -->
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Summer Roll</div><div class="price w3-col s3 w3-right-align"> 6.95</div> </div>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Summer Roll</div><div class="price w3-col s3 w3-left-align"> 6.95</div> </div>
               <span>Mixed vegetables wrapped in rice paper <br> served with sweet and chilli sauce</span>
             </div> 
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Gyoza (Steamed or Fried)</div><div class="price w3-col s3 w3-right-align"> 5.95</div> </div>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Gyoza (Steamed or Fried)</div><div class="price w3-col s3 w3-left-align"> 5.95</div> </div>
               <span>Fried Japanese pork dumpling <br> Steamed or deep fried</span>
             </div> 
             <div class="dish-item">
               <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Tempura Appetizers</div></div>
               <span>Served with tempura sauce</span>
               <div class="w3-row">  
-                <div class="alternate-price w3-col s10 w3-padding-left">Chicken &amp; Mixed Veggies</div><div class="price w3-col s2 w3-right-align"> 6.95</div>
-                <div class="alternate-price w3-col s10 w3-padding-left">Shrimp &amp; Mixed Veggies</div><div class="price w3-col s2 w3-right-align"> 8.95</div>
+                <div class="alternate-price w3-col s9 w3-padding-left">Chicken &amp; Mixed Veggies</div><div class="price w3-col s3 w3-left-align"> 6.95</div>
+                <div class="alternate-price w3-col s9 w3-padding-left">Shrimp &amp; Mixed Veggies</div><div class="price w3-col s3 w3-left-align"> 8.95</div>
               </div>
             </div>
             <!-- menu image -->
@@ -301,44 +334,44 @@
             </div>
             <!-- menu image -->
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Tuna Sashimi Appetizer</div><div class="price w3-col s3 w3-right-align"> 10.95</div> </div>
-              <span>9 slices of tuna</span>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Tuna Sashimi Appetizer</div><div class="price w3-col s3 w3-left-align"> 10.95</div> </div>
+              <span>9 slices of tuna (assorted)</span>
             </div> 
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Salmon Sashimi Appetizer</div><div class="price w3-col s3 w3-right-align"> 10.95</div> </div>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Salmon Sashimi Appetizer</div><div class="price w3-col s3 w3-left-align"> 10.95</div> </div>
               <span>9 slices of salmon</span>
             </div> 
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Sushi Sampler</div><div class="price w3-col s3 w3-right-align"> 10.95</div> </div>
-              <span>Tuna, salmon, 2 white fish, kani, shrimp</span>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Sushi Sampler</div><div class="price w3-col s3 w3-left-align"> 10.95</div> </div>
+              <span>Tuna, salmon, white fish, kani, shrimp</span>
             </div> 
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Sashimi Appetizers Sampler</div><div class="price w3-col s3 w3-right-align"> 10.95</div> </div>
-              <span>3 Tuna, 3 salmon, 3 white fish</span>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Sashimi Appetizers Sampler</div><div class="price w3-col s3 w3-left-align"> 10.95</div> </div>
+              <span>Tuna, salmon, white fish</span>
             </div>
             <div class="dish-item">     
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Spice Tuna Tartar</div><div class="price w3-col s3 w3-right-align"> 12.95</div> </div>
-              <span> Chopped tuna, scallions japanese <br>spicy sauce and seasme seed</span>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Spice Tuna Tartar</div><div class="price w3-col s3 w3-left-align"> 12.95</div> </div>
+              <span> Chopped tuna, scallions, japanese <br>spicy sauce and seasme seed</span>
             </div> 
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Tuna Tatki</div><div class="price w3-col s3 w3-right-align"> 10.95</div> </div>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Tuna Tatki</div><div class="price w3-col s3 w3-left-align"> 10.95</div> </div>
               <span>Thin Slices of seared tuna<br> served with Ponzu sauce</span>
             </div> 
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Seafood Sunomono</div><div class="price w3-col s3 w3-right-align"> 9.95</div> </div>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Seafood Sunomono</div><div class="price w3-col s3 w3-left-align"> 9.95</div> </div>
               <span>Octopus, Conch, Shrimp, <br>Kani with cucumber in tangy rice vinegar</span>
             </div> 
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Spicy Salad Tuna/Salmon</div><div class="price w3-col s3 w3-right-align"> 10.95</div> </div>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Spicy Salad Tuna/Salmon</div><div class="price w3-col s3 w3-left-align"> 10.95</div> </div>
               <span>Tuna or Salmon, Japanese Spicy Sauce, <br>cucumber, carrots, tomatoes, <br> spinach, scallions, sesame seed </span>
             </div> 
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Spicy Conch or Octopus</div><div class="price w3-col s3 w3-right-align"> 8.95</div> </div>
-              <span>Conch or Octopus, masako,<br> scallion &amp; cucmber with a spicy sauce </span>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Spicy Conch or Octopus</div><div class="price w3-col s3 w3-left-align"> 8.95</div> </div>
+              <span>Conch or Octopus, masako,<br> scallions &amp; cucmber with a spicy sauce </span>
             </div> 
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Spicy Ocean</div><div class="price w3-col s3 w3-right-align"> 9.95</div> </div>
-              <span>Conch and octopus, masago, scalion &amp; <br>cucmber with a spicy sauce</span>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Spicy Ocean</div><div class="price w3-col s3 w3-left-align"> 9.95</div> </div>
+              <span>Conch and octopus, masago, scallions &amp; <br>cucmber with a spicy sauce</span>
             </div> 
           </div> 
         </div>
@@ -358,31 +391,31 @@
             </div>
             <!-- menu image -->
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Fantasy Roll</div><div class="price w3-col s3 w3-right-align"> 9.95</div> </div>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Fantasy Roll</div><div class="price w3-col s3 w3-left-align"> 9.95</div> </div>
               <span>Spicy krab, salmon &amp; carrots <br> served with rice vinegar sauce</span>
             </div> 
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Kanisu Roll</div><div class="price w3-col s3 w3-right-align"></div> </div>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Kanisu Roll</div><div class="price w3-col s3 w3-left-align"></div> </div>
               <span>Kani, avocado, fish eggs <br>served with rice vinegar sauce</span>
             </div> 
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">K.C. Roll</div><div class="price w3-col s3 w3-right-align"> 8.95</div></div>
-              <span>Salmon, krab, avocado, asparagus <br> cream cheese with masago &amp; scallion</span>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">K.C. Roll</div><div class="price w3-col s3 w3-left-align"> 8.95</div></div>
+              <span>Salmon, krab, avocado, asparagus <br> cream cheese with masago &amp; scallions</span>
             </div>
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Rainbow Ocean Roll</div><div class="price w3-col s3 w3-right-align"> 12.95</div> </div>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Rainbow Ocean Roll</div><div class="price w3-col s3 w3-left-align"> 12.95</div> </div>
               <span>Kani, avocado, fish eggs, tuna, <br> Salmon and white fish</span>
             </div> 
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Tuna Ocean Roll</div><div class="price w3-col s3 w3-right-align"> 10.95</div> </div>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Tuna Ocean Roll</div><div class="price w3-col s3 w3-left-align"> 10.95</div> </div>
               <span>Tuna, asparagus, avocado, <br>fish eggs, ponzo sauce</span>
             </div>  
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Salmon Ocean Roll</div><div class="price w3-col s3 w3-right-align"> 9.95</div> </div>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Salmon Ocean Roll</div><div class="price w3-col s3 w3-left-align"> 9.95</div> </div>
               <span>Salmon, asparagus, avocado, <br>fish eggs, ponzo sauce</span>
             </div> 
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Sunshine Roll</div><div class="price w3-col s3 w3-right-align"> 10.95</div> </div>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Sunshine Roll</div><div class="price w3-col s3 w3-left-align"> 10.95</div> </div>
               <span>Krab, shrimp, tamgo, avocado &amp; masago <br>with rice vinegar sauce</span>
             </div>           
           </div>
@@ -395,7 +428,7 @@
     <!-- ************************  CD4.PSD  ************************************************--> 
     <div id="sig_rolls" style="display:none; padding-bottom:32px">
       <div style="display:flex;justify-content:space-around;" class="w3-chada-gold">
-        <h1 class="w3-chada-gold header" style="display:flex;">Signature Rolls</h1><h1 class="w3-chada-gold header" style="display:flex;">Rolls</h1>
+        <h1 class="w3-chada-gold header" style="display:flex;">Signature Rolls</h1>
         <span onclick="document.getElementById('menu').style.display='none'" class="w3-button w3-display-topright w3-large">x</span>
       </div>    
       <div class="w3-cell-row">
@@ -413,32 +446,32 @@
             </div>
             <!-- menu image -->
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">American Dream Roll</div><div class="price w3-col s3 w3-right-align"> 10.95</div> </div>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">American Dream Roll</div><div class="price w3-col s3 w3-left-align"> 10.95</div> </div>
               <span>Shrimp, tempura, lettuce, cucumber, masago, mayo &amp; avocado</span>
             </div> 
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Bangkok Roll</div><div class="price w3-col s3 w3-right-align"> 10.95</div> </div>
-              <span>Assorted fish, cheese, scallion, cilantro &amp; masago</span>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Bangkok Roll</div><div class="price w3-col s3 w3-left-align"> 10.95</div> </div>
+              <span>Assorted fish, cream cheese, scallions, cilantro &amp; masago</span>
             </div> 
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Boston Roll</div><div class="price w3-col s3 w3-right-align"> 10.95</div> </div>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Boston Roll</div><div class="price w3-col s3 w3-left-align"> 10.95</div> </div>
               <span>Shrimp, cucumber, lettuce, avocado, mayo &amp; masago</span>
             </div> 
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Crazy Roll</div><div class="price w3-col s3 w3-right-align"> 10.95</div> </div>
-              <span>Salmon skin, eel, asparagus, avocado, scallion, masago &amp; mayo</span>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Crazy Roll</div><div class="price w3-col s3 w3-left-align"> 10.95</div> </div>
+              <span>Salmon skin, eel, asparagus, avocado, scallions, masago &amp; mayo</span>
             </div>
             <div class="dish-item">     
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">KFC Roll</div><div class="price w3-col s3 w3-right-align"> 12.95</div> </div>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">KFC Roll</div><div class="price w3-col s3 w3-left-align"> 12.95</div> </div>
               <span>Chicken, tempura, with eel sauce</span>
             </div> 
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Dancing Eel Roll</div><div class="price w3-col s3 w3-right-align"> 10.95</div> </div>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Dancing Eel Roll</div><div class="price w3-col s3 w3-left-align"> 10.95</div> </div>
               <span>Kani, cucumber, avocado &amp; masago topped with<br>eel &amp; eel sauce</span>
             </div> 
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Red Dragon Roll</div><div class="price w3-col s3 w3-right-align"> 9.95</div> </div>
-              <span></span>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Red Dragon Roll</div><div class="price w3-col s3 w3-left-align"> 9.95</div> </div>
+              <span>Shrimp tempura, eel, avocado, cream cheese, tuna topped with mayo, eel &amp; kimchee sauce</span>
             </div>
             <!-- menu image -->
             <div class="menu_img" style="margin-top:16px;">
@@ -451,28 +484,28 @@
             </div>
             <!-- menu image -->          
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">J.B. Tempura Roll</div><div class="price w3-col s3 w3-right-align"> 10.95</div> </div>
-              <span>Deep fried salmon, scallions &amp; cream cheese</span>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">J.B. Tempura Roll</div><div class="price w3-col s3 w3-left-align"> 10.95</div> </div>
+              <span>Deep fried salmon, scallions, cream cheese with eel sauce</span>
             </div> 
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Shrimp Tempura Roll</div><div class="price w3-col s3 w3-right-align"> 8.95</div> </div>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Shrimp Tempura Roll</div><div class="price w3-col s3 w3-left-align"> 8.95</div> </div>
               <span>Shrimp tempura, asparagus, avocado, scallions, masago &amp; mayo with eel sauce</span>
             </div> 
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Rainbow Roll</div><div class="price w3-col s3 w3-right-align"> 9.95</div> </div>
-              <span>Assorted fish on top of California roll with sauce</span>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Rainbow Roll</div><div class="price w3-col s3 w3-left-align"> 9.95</div> </div>
+              <span>Kani, Avocado, cucumber, topped with tuna, salmaon &amp; white fish</span>
             </div>
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Mexican Roll</div><div class="price w3-col s3 w3-right-align"> 9.95</div> </div>
-              <span>Shrimp Tempura, cucumber, avocado, scallion, masago &amp; mayo</span>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Mexican Roll</div><div class="price w3-col s3 w3-left-align"> 9.95</div> </div>
+              <span>Shrimp Tempura, cucumber, avocado, scallions, masago &amp; mayo</span>
             </div>
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Volcano Roll</div><div class="price w3-col s3 w3-right-align"> 9.95</div> </div>
-              <span>Avocado, masago, scallions, cheese, cucumber with baked seafood on top</span>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Volcano Roll</div><div class="price w3-col s3 w3-left-align"> 9.95</div> </div>
+              <span>Avocado, masago, scallions, cream cheese, cucumber with baked seafood on top</span>
             </div>
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Spider Roll</div><div class="price w3-col s3 w3-right-align"> 9.95</div> </div>
-              <span>Soft shell crab tempura, cream cheese, avocado, fish egg, spicy mayo, eel sauce</span>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Spider Roll</div><div class="price w3-col s3 w3-left-align"> 9.95</div> </div>
+              <span>Soft shell crab tempura, cream cheese, avocado, masago, spicy mayo, eel sauce</span>
             </div>   
             <!-- menu image -->
             <div class="menu_img" style="margin-top:16px;">
@@ -484,27 +517,29 @@
               </div>
             </div>
             <!-- menu image -->
+            <h2 class="w3-chada-gold category">ROLLS</h2>
+            <h3 class="w3-right-align">HAND ROLL/ROLL</h3>
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Spicy Tuna Roll</div><div class="price w3-col s3 w3-right-align"> 9.95</div> </div>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Spicy Tuna Roll</div><div class="price w3-col s3 w3-left-align">5 / 7</div> </div>
             </div> 
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Vegetable Roll</div><div class="price w3-col s3 w3-right-align"></div> </div>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Vegetable Roll</div><div class="price w3-col s3 w3-left-align"> 4 / 6</div> </div>
             </div> 
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Salmon Skin Roll</div><div class="price w3-col s3 w3-right-align"> 8.95</div></div>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Salmon Skin Roll</div><div class="price w3-col s3 w3-left-align"> 4 / 6</div></div>
             </div>
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Eel Roll</div><div class="price w3-col s3 w3-right-align"> 12.95</div> </div>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Eel Roll</div><div class="price w3-col s3 w3-left-align"> 5 / 7</div> </div>
             </div> 
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Tekka Roll</div><div class="price w3-col s3 w3-right-align"> 10.95</div> </div>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Tuna (Tekka) Roll</div><div class="price w3-col s3 w3-left-align"> 4 / 6</div> </div>
             </div>  
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Salmon Roll</div><div class="price w3-col s3 w3-right-align"> 9.95</div> </div>
-              <span>Salmon &amp; scallion</span>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Salmon Roll</div><div class="price w3-col s3 w3-left-align"> 4 / 6</div> </div>
+              <span>Salmon &amp; scallions</span>
             </div> 
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Hamachi Roll</div><div class="price w3-col s3 w3-right-align"> 10.95</div> </div>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Hamachi Roll</div><div class="price w3-col s3 w3-left-align"> 5 / 7</div> </div>
             </div>            
           </div> 
         </div>
@@ -513,60 +548,60 @@
         <!--|||||||||||||||||||||||||||||||||  RIGHT COLUMN ||||||||||||||||||||||||| -->
         <div class="w3-cell" style="width:50%;">
           <div class="w3-container">
-            <h2 class="w3-chada-gold category">Sushi/Sashimi</h2>  
+            <h2 class="w3-chada-gold category" style="background-color:;">Sushi/Sashimi</h2>  
               <div class="dish-item">
-                <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Hokkigai (Quail egg) </div><div class="price w3-col s3 w3-right-align">  1.50 per piece</div></div>
+                <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Hokkigai (Quail egg) </div><div class="price w3-col s3 w3-left-align">  1.50</div></div>
               </div> 
               <div class="dish-item">
-                <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Imitation Crab</div><div class="price w3-col s3 w3-right-align"> 2.50</div></div>
+                <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Imitation Crab</div><div class="price w3-col s3 w3-left-align"> 2.50</div></div>
               </div>
               <div class="dish-item">
-                <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Octopus</div><div class="price w3-col s3 w3-right-align"> 2.75</div> </div>
+                <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Octopus</div><div class="price w3-col s3 w3-left-align"> 2.75</div> </div>
               </div> 
               <div class="dish-item">
-                <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Shrimp</div><div class="price w3-col s3 w3-right-align"> 2.25</div> </div>
+                <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Shrimp</div><div class="price w3-col s3 w3-left-align"> 2.25</div> </div>
               </div>
               <div class="dish-item">
-                <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Tuna</div><div class="price w3-col s3 w3-right-align"> 2.75</div> </div>
+                <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Tuna</div><div class="price w3-col s3 w3-left-align"> 2.75</div> </div>
               </div> 
               <div class="dish-item">
-                <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Salmon</div><div class="price w3-col s3 w3-right-align"> 2.50</div></div>
+                <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Salmon</div><div class="price w3-col s3 w3-left-align"> 2.50</div></div>
               </div>
               <div class="dish-item">
-                <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Escolar</div><div class="price w3-col s3 w3-right-align"> 2.75</div> </div>
+                <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Escolar</div><div class="price w3-col s3 w3-left-align"> 2.75</div> </div>
               </div> 
               <div class="dish-item">
-                <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Wanoo</div><div class="price w3-col s3 w3-right-align"> 2.50</div> </div>
+                <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Wahoo</div><div class="price w3-col s3 w3-left-align"> 2.50</div> </div>
               </div>
               <div class="dish-item">
-                <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Ikura</div><div class="price w3-col s3 w3-right-align"> 3.50</div> </div>
+                <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Ikura</div><div class="price w3-col s3 w3-left-align"> 3.50</div> </div>
               </div> 
               <div class="dish-item">
-                <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Sweet Shrimp</div><div class="price w3-col s3 w3-right-align"> 3.95</div></div>
+                <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Sweet Shrimp (Amaebi)</div><div class="price w3-col s3 w3-left-align"> 3.95</div></div>
               </div>
               <div class="dish-item">
-                <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Tamago</div><div class="price w3-col s3 w3-right-align"> 2.50</div> </div>
+                <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Tamago</div><div class="price w3-col s3 w3-left-align"> 2.50</div> </div>
               </div> 
               <div class="dish-item">
-                <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Inari</div><div class="price w3-col s3 w3-right-align"> 2.75</div> </div>
+                <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Inari</div><div class="price w3-col s3 w3-left-align"> 2.75</div> </div>
               </div>
               <div class="dish-item">
-                <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Conch</div><div class="price w3-col s3 w3-right-align"> 2.75</div> </div>
+                <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Conch</div><div class="price w3-col s3 w3-left-align"> 2.75</div> </div>
               </div> 
               <div class="dish-item">
-                <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Masago (fish egg)</div><div class="price w3-col s3 w3-right-align"> 3.25</div></div>
+                <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Masago</div><div class="price w3-col s3 w3-left-align"> 3.25</div></div>
               </div>
               <div class="dish-item">
-                <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Yellowtail</div><div class="price w3-col s3 w3-right-align"> 3.50</div> </div>
+                <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Yellowtail</div><div class="price w3-col s3 w3-left-align"> 3.50</div> </div>
               </div> 
               <div class="dish-item">
-                <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Smoked eel</div><div class="price w3-col s3 w3-right-align"> 3.50</div> </div>
+                <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Smoked eel</div><div class="price w3-col s3 w3-left-align"> 3.50</div> </div>
               </div>
               <div class="dish-item">
-                <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Squid</div><div class="price w3-col s3 w3-right-align"> 3.50</div> </div>
+                <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Squid</div><div class="price w3-col s3 w3-left-align"> 3.50</div> </div>
               </div> 
               <div class="dish-item">
-                <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Uni (sea urchin)</div><div class="price w3-col s3 w3-right-align"> Market price</div></div>
+                <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Uni (sea urchin)</div><div class="price w3-col s3 w3-left-align"> Market price</div></div>
               </div>
               <!-- menu image -->
               <div class="menu_img" style="margin-top:16px;">
@@ -577,63 +612,63 @@
                   </div>
                 </div>
               </div>
-            <h2 class="w3-chada-gold category">Vegetarian rolls</h2>
+            <h2 class="w3-chada-gold category" style="background-color:#66ff66;">Vegetarian rolls</h2>
               <div class="dish-item">
-                <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Avocado Roll</div><div class="price w3-col s3 w3-right-align"> 4.95</div> </div>
+                <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Avocado Roll</div><div class="price w3-col s3 w3-left-align"> 4.95</div> </div>
               </div> 
               <div class="dish-item">
-                <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Cucumber Roll</div><div class="price w3-col s3 w3-right-align"> 4.95</div></div>
+                <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Cucumber Roll</div><div class="price w3-col s3 w3-left-align"> 4.95</div></div>
               </div>
               <div class="dish-item">
-                <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Veggie Roll</div><div class="price w3-col s3 w3-right-align"> 4.95</div> </div>
+                <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Veggie Roll</div><div class="price w3-col s3 w3-left-align"> 4.95</div> </div>
               </div> 
               <div class="dish-item">
-                <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Asparagus Roll</div><div class="price w3-col s3 w3-right-align"> 4.95</div> </div>
+                <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Asparagus Roll</div><div class="price w3-col s3 w3-left-align"> 4.95</div> </div>
               </div>
-              <h2 class="w3-chada-gold category">Teriyaki</h2>
+              <h2 class="category" style="background-color:#66ff66;">Teriyaki</h2>
               <div class="dish-item">
-                    <span>Served with soup of the day or salad &amp; white rice</span>
+                    <span>Served with soup of the day or salad &amp; white rice.</span>
                     <span>Extra $1 for brown rice</span>
               </div>
               <div class="dish-item">
-                <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Chicken teriyaki</div><div class="price w3-col s3 w3-right-align"> 14.95</div></div>
+                <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Chicken teriyaki</div><div class="price w3-col s3 w3-left-align"> 14.95</div></div>
               </div> 
               <div class="dish-item">
-                <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Steak teriyaki</div><div class="price w3-col s3 w3-right-align"> 16.95</div></div>
+                <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Steak teriyaki</div><div class="price w3-col s3 w3-left-align"> 16.95</div></div>
               </div>
               <div class="dish-item">
-                <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Fish teriyaki</div><div class="price w3-col s3 w3-right-align"> 16.95</div> </div>
+                <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Fish teriyaki</div><div class="price w3-col s3 w3-left-align"> 16.95</div> </div>
                 <span>Catch of the day</span>
               </div> 
               <div class="dish-item">
-                <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Salmon teriyaki</div><div class="price w3-col s3 w3-right-align"> 17.95</div> </div>
+                <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Salmon teriyaki</div><div class="price w3-col s3 w3-left-align"> 17.95</div> </div>
               </div>
-            <h2 class="w3-chada-gold category">Katsu</h2>
+            <h2 class="category" style="background-color:#66ff66;">Katsu</h2>
               <div class="dish-item">
-                    <span>Panko breaded deep fried with katsu sauce</span>
-                    <span>Served with soup of the day or salad &amp; white rice</span>
+                    <span>Deep fried Panko bread with katsu sauce.</span>
+                    <span>Served with soup of the day or salad &amp; white rice.</span>
                     <span>Extra $1 for brown rice</span>
               </div>
               <div class="dish-item">
-                <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Chicken katsu</div><div class="price w3-col s3 w3-right-align"> 14.95</div> </div>
+                <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Chicken katsu</div><div class="price w3-col s3 w3-left-align"> 14.95</div> </div>
               </div> 
               <div class="dish-item">
-                <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Fish katsu</div><div class="price w3-col s3 w3-right-align"> 16.95</div></div>
+                <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Fish katsu</div><div class="price w3-col s3 w3-left-align"> 16.95</div></div>
               </div>
-            <h2 class="w3-chada-gold category">Tempura</h2>
+            <h2 class=" category" style="background-color:#66ff66;">Tempura</h2>
               <div class="dish-item">
-                    <span>Lightly battered deep fried served with tempura sauce</span>
-                    <span>Served with soup of the day or salad &amp; white rice</span>
+                    <span>Lightly battered deep fried with tempura sauce.</span>
+                    <span>Served with soup of the day or salad &amp; white rice.</span>
                     <span>Extra $1 for brown rice</span>
               </div>
               <div class="dish-item">
-                <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Mixed Vegetables</div><div class="price w3-col s3 w3-right-align"> 12.95</div> </div>
+                <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Mixed Vegetables</div><div class="price w3-col s3 w3-left-align"> 12.95</div> </div>
               </div> 
               <div class="dish-item">
-                <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Chicken &amp; vegetables</div><div class="price w3-col s3 w3-right-align"> 14.95</div> </div>
+                <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Chicken &amp; vegetables</div><div class="price w3-col s3 w3-left-align"> 14.95</div> </div>
               </div>
               <div class="dish-item">
-                <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Shrimp &amp; vegetables</div><div class="price w3-col s3 w3-right-align"> 16.95</div> </div>
+                <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Shrimp &amp; vegetables</div><div class="price w3-col s3 w3-left-align"> 16.95</div> </div>
               </div>            
           </div>
         </div>
@@ -652,44 +687,40 @@
         <div class="w3-cell" style="width:50%;" >
           <div class="w3-container">
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Black Dragon Roll</div><div class="price w3-col s3 w3-right-align"> 14.95</div> </div>
-              <span>Shrimp tempura, asparagus, avocado, fish egg, topped with eel &amp; Mayo with eel and Kimchee Sauce</span>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Black Dragon Roll</div><div class="price w3-col s3 w3-left-align"> 14.95</div> </div>
+              <span>Shrimp tempura, asparagus, avocado, masago, eel on top, served with mayo, eel &amp Kimchee Sauce</span>
             </div>
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Red Dragon Roll</div><div class="price w3-col s3 w3-right-align"> 14.95</div> </div>
-              <span>Shrimp tempura, eel, avocado, cream cheese, tuna topped with mayo, eel &amp; kimchee sauce</span>
-            </div>
-            <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Hot Tuna Sandwich Roll</div><div class="price w3-col s3 w3-right-align"> 12.95</div> </div>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Hot Tuna Sandwich Roll</div><div class="price w3-col s3 w3-left-align"> 12.95</div> </div>
               <span>Spicy Tuna, lettuce, tomatoes, tempura flakes</span>
             </div>
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Tuna Lover Roll</div><div class="price w3-col s3 w3-right-align"> 12.95</div> </div>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Tuna Lover Roll</div><div class="price w3-col s3 w3-left-align"> 12.95</div> </div>
               <span>Spicy tuna topped with tuna and avocado</span>
             </div>
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Pyramid Bomb</div><div class="price w3-col s3 w3-right-align"> 14.95</div> </div>
-              <span>Salmon, scallion, cream cheese, kani, deep fried, topped with kani and eel sauce</span>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Pyramid Bomb</div><div class="price w3-col s3 w3-left-align"> 14.95</div> </div>
+              <span>Salmon, scallions, cream cheese, kani, deep fried, topped with kani and eel sauce</span>
             </div>
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Miami Heat Roll</div><div class="price w3-col s3 w3-right-align"> 12.95</div> </div>
-              <span>Tuna, Salmon, white fish, cream cheese, cucumber, scallion, avocado &amp; fish egg</span>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Miami Heat Roll</div><div class="price w3-col s3 w3-left-align"> 12.95</div> </div>
+              <span>Tuna, Salmon, white fish, cream cheese, cucumber, scallions, avocado &amp; masago</span>
             </div>
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Snow White Roll</div><div class="price w3-col s3 w3-right-align"> 12.95</div> </div>
-              <span>Kani, cucumber, avocado, fish egg, spicy mayo, wrapped with soy paper</span>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Snow White Roll</div><div class="price w3-col s3 w3-left-align"> 12.95</div> </div>
+              <span>Kani, cucumber, avocado, masago, spicy mayo, wrapped with soy paper</span>
             </div>
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Sweet Heart Roll</div><div class="price w3-col s3 w3-right-align"> 12.95</div> </div>
-              <span>Shrimp, eel, kani, cream cheese, fish egg, deep fried tempura, with eel sauce</span>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Sweet Heart Roll</div><div class="price w3-col s3 w3-left-align"> 12.95</div> </div>
+              <span>Shrimp, eel, kani, cream cheese, masago, deep fried tempura, with eel sauce</span>
             </div>
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Sexy Roll</div><div class="price w3-col s3 w3-right-align"> 14.95</div> </div>
-              <span>Tempura shrimp, asparagus, avocado, scallion, fish egg, tempura flakes</span>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Sexy Roll</div><div class="price w3-col s3 w3-left-align"> 14.95</div> </div>
+              <span>Tempura shrimp, asparagus, avocado, scallions, masago, tempura flakes</span>
             </div>
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Lobster Bomb Roll</div><div class="price w3-col s3 w3-right-align"> 24.95</div> </div>
-              <span>Lobster tails, lettuce, avocado, cucumber, fish egg, with mayo, eel &amp; kimchee sauce</span>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Lobster Bomb Roll</div><div class="price w3-col s3 w3-left-align"> 24.95</div> </div>
+              <span>Lobster tails, lettuce, avocado, cucumber, masago, with mayo, eel &amp; kimchee sauce</span>
             </div>
           </div> 
         </div>
@@ -699,19 +730,19 @@
         <div class="w3-cell" style="width:50%;">
           <div class="w3-container">
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Mini Boat (Boat for one)</div><div class="price w3-col s3 w3-right-align"> 24.95</div> </div>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Mini Boat (Boat for one)</div><div class="price w3-col s3 w3-left-align"> 24.95</div> </div>
               <span>6 pcs of assorted sushi, 12 pcs of assorted sashimi &amp; california roll</span>
             </div>
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Love Boat (Boat for two)</div><div class="price w3-col s3 w3-right-align"> 49.95</div></div>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Love Boat (Boat for two)</div><div class="price w3-col s3 w3-left-align"> 49.95</div></div>
               <span>12 pcs of assorted sushi, 16 pcs of assorted sashimi, california roll &amp; JB roll</span>
             </div> 
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Party Boat (Boat for three)</div><div class="price w3-col s3 w3-right-align"> 75.95</div></div>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Party Boat (Boat for three)</div><div class="price w3-col s3 w3-left-align"> 75.95</div></div>
               <span>16 pcs of assorted sushi, 20 pcs of assorted sashimi, california roll, JB roll &amp; tuna roll</span>
             </div>
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Titanic Boat (Boat for four)</div><div class="price w3-col s3 w3-right-align"> 95.95</div> </div>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Titanic Boat (Boat for four)</div><div class="price w3-col s3 w3-left-align"> 95.95</div> </div>
               <span>20 pcs of assorted sushi, 24 pcs of assorted sashimi, california roll, JB roll &amp; shrimp tempura roll</span>
             </div>
           </div>
@@ -741,11 +772,11 @@
               </div>
             </div>
             <div class="dish-item ">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Broccoli</div><div class="price w3-col s3 w3-right-align"></div> </div>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Broccoli</div><div class="price w3-col s3 w3-left-align"></div> </div>
               <span>Stir fried fresh broccoli with brown sauce</span>
             </div>
             <div class="dish-item ">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Cashew Nut</div><div class="price w3-col s3 w3-right-align"></div> </div>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Cashew Nut</div><div class="price w3-col s3 w3-left-align"></div> </div>
               <span>Stir fried carrot, onions, celery &amp; cashew nut</span>
             </div>
             <!-- menu image -->
@@ -759,19 +790,19 @@
             </div>
             <!-- menu image -->
             <div class="dish-item ">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Ginger Sauce</div><div class="price w3-col s3 w3-right-align"></div> </div>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Ginger Sauce</div><div class="price w3-col s3 w3-left-align"></div> </div>
               <span>Stir fried onion, red peppers, broccoli, pineapple &amp; cucumber</span>
             </div>
             <div class="dish-item ">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Basil Sauce</div><div class="price w3-col s3 w3-right-align"> </div> </div>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Basil Sauce</div><div class="price w3-col s3 w3-left-align"> </div> </div>
               <span>Stir fried fresh red bell peppers, onions, green bean &amp; basil</span>
             </div>
             <div class="dish-item ">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Garlic Sauce</div><div class="price w3-col s3 w3-right-align"> </div> </div>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Garlic Sauce</div><div class="price w3-col s3 w3-left-align"> </div> </div>
               <span>Stir fried fresh garlic, mixed vegetables with brown sauce </span>
             </div>
             <div class="dish-item ">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Mixed Vegetables</div><div class="price w3-col s3 w3-right-align"> </div> </div>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Mixed Vegetables</div><div class="price w3-col s3 w3-left-align"> </div> </div>
               <span>Stir fried mixed vegetables with brown sauce</span>
             </div>
             <!-- menu image -->
@@ -785,15 +816,15 @@
             </div>
             <!-- menu image -->
             <div class="dish-item ">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Sweet &amp; Sour Sauce</div><div class="price w3-col s3 w3-right-align"> </div> </div>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Sweet &amp; Sour Sauce</div><div class="price w3-col s3 w3-left-align"> </div> </div>
               <span>Stir fried onion, red peppers, pineapple &amp; cucumber</span>
             </div>
             <div class="dish-item ">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Peanut Sauce</div><div class="price w3-col s3 w3-right-align"> </div> </div>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Peanut Sauce</div><div class="price w3-col s3 w3-left-align"> </div> </div>
               <span>Stir fried mixed vegetables with peanut sauce</span>
             </div>
             <div class="dish-item ">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Sweet Red Chili Sauce</div><div class="price w3-col s3 w3-right-align"> </div> </div>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Sweet Red Chili Sauce</div><div class="price w3-col s3 w3-left-align"> </div> </div>
               <span>Homemade chili sauce stir fried with red peppers</span>
             </div>
           </div>
@@ -807,8 +838,8 @@
               </div>
               <span>Meat Selection:</span>
               <div class="flex-container">
-                <div class="flex1"><div class="flex11">Chicken, beef, pork or tofu</div><div class="flex12">Shrimp, squid or Scallop</div></div>
-                <div class="flex2"><div class="flex21">14.95</div><div class="flex22">16.95</div></div>
+                <div class="flex1"><div class="flex11">Chicken, beef, pork or tofu</div><div class="flex12">Shrimp, squid or Scallop</div><div>Seafood</div></div>
+                <div class="flex2"><div class="flex21">14.95</div><div class="flex22">16.95</div><div>21.95</div></div>
               </div>              
             </div>
             <div class="dish-item ">
@@ -821,11 +852,11 @@
             </div>
             <div class="dish-item ">
               <div class="w3-margin-top w3-row"><div class="dish-name">Panang Curry</div></div>
-              <span>Curry paste, red bell pepper, peanut, green bell, green bean &amp; coconut milk</span>
+              <span>Curry paste, red &amp green bell pepper, peanut, green bean &amp; coconut milk</span>
             </div>
             <div class="dish-item ">
               <div class="w3-margin-top w3-row"><div class="dish-name">Massaman Curry</div></div>
-              <span>Onions, bell pepper, sweet tomato, cashew nut &amp; coconut milk</span>
+              <span>Onions, red &amp green bell pepper, sweet tomato, cashew nut &amp; coconut milk</span>
             </div>
             <!-- menu image -->
             <div class="menu_img" style="margin-top:16px;">
@@ -847,7 +878,7 @@
     <!-- ************************  CD8.PSD  *******************************************************-->
     <div id="ffa" style="display:none; padding-bottom:32px">
       <div style="display:flex;justify-content:space-around;" class="w3-chada-gold">
-        <h1 class="w3-chada-gold header" style="display:flex;">Stir-Fried Noodle Dishes</h1><h1 class="w3-chada-gold header" style="width:50%; text-align:center">Duck</h1>
+        <h1 class="w3-chada-gold header w3-center" style="display:flex;">Stir-Fried <br>Noodle Dishes</h1><h1 class="w3-chada-gold header" style="width:50%; text-align:center">Duck</h1>
         <span onclick="document.getElementById('menu').style.display='none'" class="w3-button w3-display-topright w3-large">x</span>
       </div>
       <div class="w3-cell-row">
@@ -856,31 +887,31 @@
           <div class="w3-container">
             <div style="font-weight:bold;">Choice of:<br></div>
             <div class="w3-row">
-              <div class="w3-col s9 items_choices">Chicken, beef, pork, or tofu</div><div class="w3-col s3 w3-right-align price"> 12.95</div>
-              <div class="w3-col s9 items_choices">Shrimp or squid</div><div class="w3-col s3 w3-right-align price"> 15.95</div>
+              <div class="w3-col s9 items_choices">Chicken, beef, pork, or tofu</div><div class="w3-col s3 w3-left-align price"> 12.95</div>
+              <div class="w3-col s9 items_choices">Shrimp or squid</div><div class="w3-col s3 w3-left-align price"> 15.95</div>
             </div>
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Pad Thai</div><div class="price w3-col s3 w3-right-align"></div> </div>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Pad Thai</div><div class="price w3-col s3 w3-left-align"></div> </div>
               <span>Stir-fried rice noodles with egg, bean sprouts, scallions &amp; ground peanuts</span>
             </div>
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Pad Woonsen</div><div class="price w3-col s3 w3-right-align"></div> </div>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Pad Woonsen</div><div class="price w3-col s3 w3-left-align"></div> </div>
               <span>Clear noodles, egg, tomatoes, baby corn, onions, and scallions</span>
             </div>
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Pad See Eaw</div><div class="price w3-col s3 w3-right-align"></div> </div>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Pad See Eaw</div><div class="price w3-col s3 w3-left-align"></div> </div>
               <span>Stir-fried rice noodles with egg &amp; broccoli with brown sauce</span>
             </div>
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Pad Kee Mao</div><div class="price w3-col s3 w3-right-align"></div> </div>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Pad Kee Mao (Drunken Noodles)</div><div class="price w3-col s3 w3-left-align"></div> </div>
               <span>Spicy stir-fried rice noodles with mixed vegetables &amp; fresh basil leaves</span>
             </div>
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Yaki Soba</div><div class="price w3-col s3 w3-right-align"></div> </div>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Yaki Soba</div><div class="price w3-col s3 w3-left-align"></div> </div>
               <span>Stir-fried egg noodle, vegetables, with brown sauce</span>
             </div>
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Yaki Udon</div><div class="price w3-col s3 w3-right-align"></div> </div>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Yaki Udon</div><div class="price w3-col s3 w3-left-align"></div> </div>
               <span>Stir-fried soybean noodle &amp; vegetables with brown sauce</span>
             </div>
             <!-- menu image -->
@@ -895,30 +926,30 @@
             <!-- menu image -->
             <h2 class="w3-chada-gold category">Noodle World Soups</h2>
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Duck Noodle Soup</div><div class="price w3-col s3 w3-right-align"> 13.95</div></div>
-              <span>Roasted duck, egg, noodles, bean sprouts, scallions &amp; roasted garlic</span>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Duck Noodle Soup</div><div class="price w3-col s3 w3-left-align"> 15.95</div></div>
+              <span>Roasted duck, noodles, bean sprouts, scallions &amp; roasted garlic</span>
             </div>
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Chicken Noodle Soup</div><div class="price w3-col s3 w3-right-align"> 10.95</div></div>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Chicken Noodle Soup</div><div class="price w3-col s3 w3-left-align"> 10.95</div></div>
               <span>Chicken, bean sprouts, scallions, rice noodles, roasted garlic</span>
             </div>
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Tempura Udon Soup</div><div class="price w3-col s3 w3-right-align"> 12.95</div></div>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Tempura Udon Soup</div><div class="price w3-col s3 w3-left-align"> 12.95</div></div>
               <span>Thick wheat noodles, broccoli, carrot, snow peas in soy broth served with shrimp &amp; asparagus tempura</span>
             </div>
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Tom Yum Noodle Soup</div><div class="price w3-col s3 w3-right-align"></div></div>
-              <div class="w3-margin-top w3-row">
-                <div class="w3-col s9 items_choices">Pork &amp; Chicken</div><div class="price w3-col s3 w3-right-align">10.95</div>
-                <div class="w3-col s9 items_choices">Shrimp &amp; Beef</div><div class="price w3-col s3 w3-right-align">12.95</div>
-                <div class="w3-col s9 items_choices">Mixed Seafood</div><div class="price w3-col s3 w3-right-align">19.95</div>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Tom Yum Noodle Soup</div><div class="price w3-col s3 w3-left-align"></div></div>
+              <div class="w3-row">
+                <div class="w3-col s9 items_choices">Pork &amp; Chicken</div><div class="price w3-col s3 w3-left-align">10.95</div>
+                <div class="w3-col s9 items_choices">Shrimp &amp; Beef</div><div class="price w3-col s3 w3-left-align">12.95</div>
+                <div class="w3-col s9 items_choices">Mixed Seafood</div><div class="price w3-col s3 w3-left-align">19.95</div>
               </div>
             </div>
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Thai Noodle Soup</div><div class="price w3-col s3 w3-right-align"></div> </div>
-              <div class="w3-margin-top w3-row">
-                <div class="w3-col s9 items_choices">Beef</div><div class="w3-col s3 price w3-right-align">12.95</div>
-                <div class="w3-col s9 items_choices">Shrimp</div><div class="w3-col s3 price w3-right-align">14.95</div>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Thai Noodle Soup</div><div class="price w3-col s3 w3-left-align"></div> </div>
+              <div class="w3-row">
+                <div class="w3-col s9 items_choices">Beef</div><div class="w3-col s3 price w3-left-align">12.95</div>
+                <div class="w3-col s9 items_choices">Shrimp</div><div class="w3-col s3 price w3-left-align">14.95</div>
               </div>
             </div>
           </div> 
@@ -929,7 +960,7 @@
         <div class="w3-cell" style="width:50%;">
           <div class="w3-container">
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Crispy Duck</div><div class="price w3-col s3 w3-right-align"> 19.95</div> </div>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Crispy Duck</div><div class="price w3-col s3 w3-left-align"> 19.95</div> </div>
               <span>Choice of ginger or basil sauce</span>
               <span>Served with soup of the day or salad &amp; white rice</span>
               <span>Extra $1 for brown rice</span>
@@ -939,25 +970,25 @@
               <span>With eggs, onions, peas, carrots, tomatoes<span>
             </div>
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Mixed Vegetables</div><div class="price w3-col s3 w3-right-align"> 11.95</div></div>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Mixed Vegetables</div><div class="price w3-col s3 w3-left-align"> 11.95</div></div>
             </div> 
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Chicken ,beef or tofu</div><div class="price w3-col s3 w3-right-align"> 12.95</div></div>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Chicken, beef or tofu</div><div class="price w3-col s3 w3-left-align"> 12.95</div></div>
             </div>
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Shrimp or squid</div><div class="price w3-col s3 w3-right-align"> 14.95</div> </div>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Shrimp or squid</div><div class="price w3-col s3 w3-left-align"> 14.95</div> </div>
             </div>
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Combination</div><div class="price w3-col s3 w3-right-align"> 16.95</div> </div>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Combination</div><div class="price w3-col s3 w3-left-align"> 16.95</div> </div>
               <span>Shrimp, pork, beef, chicken</span>
             </div>
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Basil</div><div class="price w3-col s3 w3-right-align"> </div> </div>
-              <div class="w3-row"><div class="dish-name w3-col s9">Chicken, vegetables, beef, pork, tofu</div><div class="price w3-col s3 w3-right-align"> 13.95</div></div>
-              <div class="w3-row"><div class="dish-name w3-col s9">Shrimp or squid</div><div class="price w3-col s3 w3-right-align"> 15.95</div></div>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Basil Fried Rice</div><div class="price w3-col s3 w3-left-align"> </div> </div>
+              <div class="w3-row"><div class="dish-name w3-col s9">Chicken, vegetables, beef, pork, tofu</div><div class="price w3-col s3 w3-left-align"> 13.95</div></div>
+              <div class="w3-row"><div class="dish-name w3-col s9">Shrimp or squid</div><div class="price w3-col s3 w3-left-align"> 15.95</div></div>
             </div>
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Combination Pineapple</div><div class="price w3-col s3 w3-right-align"> 18.95</div> </div>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Combination Pineapple</div><div class="price w3-col s3 w3-left-align"> 18.95</div> </div>
               <span>Pineapple, cashew nut, raisin, shrimp, pork, beef, chicken</span>
             </div>
             <!-- menu image -->
@@ -972,37 +1003,37 @@
             <!-- menu image -->
             <h2 class="w3-chada-gold category">Side Orders</h2>
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Salad</div><div class="price w3-col s3 w3-right-align"> 2.50</div> </div>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Salad</div><div class="price w3-col s3 w3-left-align"> 2.50</div> </div>
             </div>
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Soup of day</div><div class="price w3-col s3 w3-right-align"> 2.50</div> </div>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Soup of day</div><div class="price w3-col s3 w3-left-align"> 2.50</div> </div>
             </div>
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Jasmin Rice</div><div class="price w3-col s3 w3-right-align"> 2.00</div> </div>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Jasmine Rice</div><div class="price w3-col s3 w3-left-align"> 2.00</div> </div>
             </div>
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Brown Rice</div><div class="price w3-col s3 w3-right-align"> 2.50</div> </div>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Brown Rice</div><div class="price w3-col s3 w3-left-align"> 2.50</div> </div>
             </div>
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Sushi</div><div class="price w3-col s3 w3-right-align"> 2.50</div> </div>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Sushi Rice</div><div class="price w3-col s3 w3-left-align"> 2.50</div> </div>
             </div>
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Eel Sauce</div><div class="price w3-col s3 w3-right-align"> 1.00</div> </div>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Eel Sauce</div><div class="price w3-col s3 w3-left-align"> 1.00</div> </div>
             </div>
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Spicy Mayo</div><div class="price w3-col s3 w3-right-align"> 1.00</div> </div>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Spicy Mayo</div><div class="price w3-col s3 w3-left-align"> 1.00</div> </div>
             </div>
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Kimchee Sauce</div><div class="price w3-col s3 w3-right-align"> 1.00</div> </div>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Kimchee Sauce</div><div class="price w3-col s3 w3-left-align"> 1.00</div> </div>
             </div>
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Ponzu Sauce</div><div class="price w3-col s3 w3-right-align"> 1.00</div> </div>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Ponzu Sauce</div><div class="price w3-col s3 w3-left-align"> 1.00</div> </div>
             </div>
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Ginger</div><div class="price w3-col s3 w3-right-align"> 1.00</div> </div>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Ginger</div><div class="price w3-col s3 w3-left-align"> 1.00</div> </div>
             </div>
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Wasabi</div><div class="price w3-col s3 w3-right-align"> 1.00</div> </div>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Wasabi</div><div class="price w3-col s3 w3-left-align"> 1.00</div> </div>
             </div>
           </div>
         </div>
@@ -1022,32 +1053,33 @@
         <div class="w3-cell" style="width:50%;" >
           <div class="w3-container">
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Chicken Katsu Box</div><div class="price w3-col s3 w3-right-align"></div></div>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Chicken Katsu Box</div><div class="price w3-col s3 w3-left-align"> 8.95</div></div>
               <span>Chicken katsu, french fries, rice, edamame</span>
             </div> 
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Chicken Teriyaki Box</div><div class="price w3-col s3 w3-right-align"></div></div>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Chicken Teriyaki Box</div><div class="price w3-col s3 w3-left-align"> 8.95</div></div>
               <span>Chicken teriyaki, french fries, rice, edamame</span>
             </div>
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Chicken Tempura Box</div><div class="price w3-col s3 w3-right-align"></div> </div>
-              <span>Chicken Tempura Box</span>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Chicken Tempura Box</div><div class="price w3-col s3 w3-left-align"> 8.95</div> </div>
+              <span>Chicken Tempura, french fries, rice edamame</span>
             </div> 
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Steak Teriyaki Box</div><div class="price w3-col s3 w3-right-align"></div> </div>
-              <span>Steak teriyaki, french fries, rice, edamame</span>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Beef Teriyaki Box</div><div class="price w3-col s3 w3-left-align"> 9.95</div> </div>
+              <span>Beef teriyaki, french fries, rice, edamame</span>
             </div>
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Sushi for Kids</div><div class="price w3-col s3 w3-right-align"></div> </div>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Sushi for Kids</div><div class="price w3-col s3 w3-left-align"> 9.95</div> </div>
               <span>California roll, kani sushi, tamago sushi, shrimp sushi &amp; edamame</span>
             </div> 
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Kid's Noodle</div><div class="price w3-col s3 w3-right-align"></div></div>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Kid's Noodle</div><div class="price w3-col s3 w3-left-align"> 9.95</div></div>
               <span>Shrimp chips, french fries, &amp; white rice</span>
             </div>
             <!-- menu image -->
             <div class="menu_img"><%=image_tag("hello_kitty.png", class:"w3-card w3-cell-middle w3-image w3-image", style:"margin:16px auto 0px auto")%></div>
             <!-- menu image -->
+            <div class="w3-text-red w3-center w3-margin-top w3-large" id="CD1">(Age 12 and under) Served with ice cream</div>  
           </div> 
         </div>
         <!--********************|||||||||||||||||||||||||||||||||  END OF LEFT COLUMN ||||||||||||||||||||||||| **********************-->
@@ -1056,10 +1088,10 @@
         <div class="w3-cell" style="width:50%;">
           <div class="w3-container">
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Vanilla Ice Cream Tempura (Vanilla)</div><div class="price w3-col s3 w3-right-align"> 5.95</div> </div>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Ice Cream Tempura (Vanilla)</div><div class="price w3-col s3 w3-left-align"> 5.95</div> </div>
             </div> 
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Banana Tempura with Ice Cream (Vanilla)</div><div class="price w3-col s3 w3-right-align"> 5.95</div></div>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Banana Tempura with Ice Cream (Vanilla)</div><div class="price w3-col s3 w3-left-align"> 5.95</div></div>
             </div>
             <!-- menu image -->
             <div class="menu_img" style="margin-top:16px;">
@@ -1072,10 +1104,14 @@
             </div>
             <!-- menu image -->
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Thai Donuts</div><div class="price w3-col s3 w3-right-align"> 4.95</div> </div>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Thai Donuts</div><div class="price w3-col s3 w3-left-align"> 4.95</div> </div>
             </div> 
             <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Moji Ice Cream (3 pcs)</div><div class="price w3-col s3 w3-right-align"> 4.95</div> </div>
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Moji Ice Cream (3 pcs)</div><div class="price w3-col s3 w3-left-align"> 4.95</div> </div>
+            </div>
+            <div class="dish-item">
+              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Ice Cream (2 scoops)</div><div class="price w3-col s3 w3-left-align"> 4.95</div> </div>
+              <span>Vanilla, green tea, chocolate, red bean, lychee, black sesami, mango</span>
             </div>
             <!-- menu image -->
             <div class="menu_img" style="margin-top:16px;">
@@ -1087,14 +1123,9 @@
               </div>
             </div>
             <!-- menu image -->
-            <div class="dish-item">
-              <div class="w3-margin-top w3-row"><div class="dish-name w3-col s9">Ice Cream (2 scoops)</div><div class="price w3-col s3 w3-right-align"> 4.95</div> </div>
-              <span>Vanilla, green tea, chocolate, red bean, lychee, black sesami, mango</span>
-            </div>
           </div>
         </div>
       </div>
-     <div class="w3-text-red w3-center w3-margin-top w3-xlarge" id="CD1">(Age 12 and under) Served with ice cream</div>  
     </div> <!-- end of view switcher container -->
     <!-- ************************  END OF CD9.PSD  ************************************************-->
     
@@ -1112,7 +1143,7 @@
     </div>
     <div style="display:flex; padding:30px" class="map_time">
       <div style="display:flex;justify-content: center; overflow:hidden;" class="map"><!--left column-->
-        <%=image_tag("https://maps.googleapis.com/maps/api/staticmap?center=1860+North+University+Drive+Planation,FL&zoom=17&scale=1&size=400x400&markers=size:mid%7Ccolor:red%7Clabel:C%7C26.148966,-80.255277&key=AIzaSyCZJK4PZFF8rSGh7cg0nNSNQNFZUOCafMU", class:"w3-hover-map", style:"object-fit:scale-down; max-width:100%")%>
+        <%=image_tag("https://maps.googleapis.com/maps/api/staticmap?center=1860+North+University+Drive+Planation,FL&zoom=17&scale=1&size=400x400&markers=size:mid%7Ccolor:red%7Clabel:C%7C26.148966,-80.255277&key=AIzaSyCZJK4PZFF8rSGh7cg0nNSNQNFZUOCafMU", style:"object-fit:scale-down; max-width:100%")%>
       </div> 
       <div>
         <table class="w3-table-all w3-centered"><!--right column-->
@@ -1167,17 +1198,34 @@
     </div>    
     <!-- contact information-->
     <div class="w3-container w3-margin-top">
-      <div class="w3-center" style="font-size:20px; font-weight:bold;"> For more information on catering, dining specials, or reservations, please contact us at (954)-473-5333<br>1860 North University Drive<br>Planation, FL</div>      
+      <div class="w3-center" style="font-size:20px; font-weight:bold;"> Are you hungry now call us. (954)-473-5333<br>1860 North University Drive<br>Planation, FL</div>      
     </div>  
   </div>
 </div>
+<!-- events modal-->
 <div id="events" class="w3-modal" style="z-index:2;">
   <div class="w3-modal-content w3-animate-zoom" style="padding-bottom:0px; margin-bottom:30px;">
     <div class="w3-container"  style="color:#fff;background-color:#13263D!important">
       <span onclick="document.getElementById('events').style.display='none'" class="w3-button w3-display-topright w3-large">x</span>
       <h1>events</h1>
-    </div>    
-    <%=image_tag("chada_event.jpg", class:"w3-image")%>  
+    </div>
+    <div class="w3-bar" id="topic" style="color:#fff;background-color:#13263D!important">
+      <!--<a data-category="all" href="" class="w3-bar-item w3-button">All</a>-->
+      <span data-category="Happy Hour" class="w3-border-chada-brown w3-bar-item w3-button" onclick="switch_view(this)">Happy Hour</span>
+      <span data-category="Ladies Night" class="w3-border-chada-brown w3-bar-item w3-button" onclick="switch_view(this)">Ladies Night</span>
+    </div>
+    <!-------Ladies Night flyer------>
+    <div id="Ladies Night" style="display:none;">
+      <div>
+      <%=image_tag("Ladies_night.png", class:"w3-image")%> 
+      </div>
+    </div>
+    <!-----Happy Hour flyer---->
+    <div id="Happy Hour" style="display:block;">
+      <div>
+      <%=image_tag("Happy_hour.png", class:"w3-image")%> 
+      </div>      
+    </div>
   </div>
-</div>    
+</div> 
 <%= render '/homepage/footer' %>
